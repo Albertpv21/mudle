@@ -8,14 +8,6 @@ def login(kasutajanimed,log,password,passwords):
     n = len(kasutajanimed)
     signal = 0
     for i in range(n):
-        if kasutajanimed[i] == log and passwords[i] == password:
-            print("Autoriseerimine õnnestus. Olete sisse logitud")
-            signal = 1
-        elif kasutajanimed[i] == log and passwords[i] != password:
-            print("Vale parool")
-            signal = -1
-    if signal == 0:      
-        print("Olete uus kasutaja")
         reg = input("Kas soovite registreeruda? y/n ")
         if reg == 'n':
             print("Te ei saa süsteemi kasutada")
@@ -24,6 +16,15 @@ def login(kasutajanimed,log,password,passwords):
             registreerimine(log,password,kasutajanimed,passwords)
         else:
             print("Sisestusviga")
+        if kasutajanimed[i] == log and passwords[i] == password:
+            print("Autoriseerimine õnnestus. Olete sisse logitud")
+            signal = 1
+        elif kasutajanimed[i] == log and passwords[i] != password:
+            print("Vale parool")
+            signal = -1
+    if signal == 0:      
+        print("Olete uus kasutaja")
+        
     
 def registreerimine(log,password,kasutajanimed,passwords):
     kasutajanimed.append(log)
@@ -60,3 +61,16 @@ def passauto()->str:
     psword = ''.join([random.choice(ls) for x in range(12)])
     print(psword)
     return psword
+def paskontroll(passwords: str)->bool:
+    ls=list(passwords)
+    for e in ls:
+        if e.isdigit(): d=True
+        if e.isalpha(): a=True
+        if e.isupper(): u=True
+        if e.islower(): l=True
+        if e in list(".,:!_*/+-¤%#&"): s=True
+    if d==True and a==True and u==True and l==True and s==True:
+        t=True
+    else:
+        t=False
+    return t

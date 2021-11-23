@@ -9,7 +9,7 @@ while True:
         log, password = kasutajaandmed()
         registreerimine(log,password,users,passwords)
     elif valik == '2':
-        log, password = kasutajaandmed()
+        log, passwords = kasutajaandmed()
         login(users,log,password,passwords)
     elif valik == '3':
         print("Head aega")
