@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a56acfc0-dffe-4be0-92fa-1a9e013d9772</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>mudle.py</StartupFile>
+    <StartupFile>Too_failidega.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,8 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Too_failidega.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mudle.py" />
     <Compile Include="Funktsioonid.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextFile.txt" />
+    <Content Include="Loetelu2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
