@@ -28,7 +28,7 @@ def salvesta_failisse(file:str):
 for i in range(10):
     salvesta_failisse("Loetelu2.txt")
 
-def faili_sisu_imberkirjutamine(file:str):
+def faili_sisu_umberkirjutamine(file:str):
     text=input("Sisesta uus tekst:")
     wtih open(file,"w") as f:
         f.write(text+"\n")

@@ -74,3 +74,16 @@ def paskontroll(passwords: str)->bool:
     else:
         t=False
     return t
+def loe_failist_listisse(file:str)->list:
+    """Loeme tekst failist ja salvesta järjendisse
+    """
+    f=open(file,"r")
+    list_=[]
+    for stroka in f:
+        list_.append(stroka.strip())
+    f.close()
+    return list_
+def faili_sisu_umberkirjutamine(file:str,list_:list):
+    wtih open(file,"w") as f:
+        for slovo in list_:
+            f.write(slovo+"\n")

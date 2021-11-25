@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a56acfc0-dffe-4be0-92fa-1a9e013d9772</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Too_failidega.py</StartupFile>
+    <StartupFile>mudle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,8 +28,10 @@
     <Compile Include="Funktsioonid.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="passwords.txt" />
     <Content Include="TextFile.txt" />
     <Content Include="Loetelu2.txt" />
+    <Content Include="users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
